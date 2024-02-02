@@ -1,0 +1,432 @@
+/* Código CSS del juego de "Piedra, papel y tijeras" */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Etiquetas principales */
+
+body {
+    background: rgb(187,255,209);
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 0rem 1rem 0rem;
+}
+footer {
+    text-align: center;
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+/* Section's */
+
+.seccion-uno {
+    width: 600px;
+    height: 410px;
+    position: relative;
+}
+.seccion-dos {
+    display: flex;
+    justify-content: center;
+    width: 550px;
+    padding-top: 2rem;
+}
+
+/* Etiquetas internas de la etiqueta footer */
+
+footer h2 {
+    font-family: monospace
+} 
+.redes img {
+    width: 50px;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Etiquetas div dentro de la etiqueta con la clase "seccion-uno" */
+
+.cuerpo-perrito {
+    width: 200px;
+    height: 200px;
+    border-radius: 45%;
+    background: rgb(186, 147, 97);
+    position: absolute;
+    top: 12rem;
+    left: 12.5rem;
+}
+.cabeza-perrito {
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgb(211, 168, 111);
+    position: absolute;
+    top: -6rem;
+    animation: animacion-cabeza 1.2s linear 0s infinite alternate none;
+}
+.oreja-uno, .oreja-dos {
+    width: 50px;
+    height: 50px;
+    background: black;
+    position: absolute;
+    top: 1rem;
+}
+.oreja-uno {
+    border-radius: 91px 30px 200px 29px;
+    left: -0.5rem;
+}
+.oreja-dos {
+    border-radius: 31px 90px 28px 200px;
+    right: -0.5rem;
+}
+.ojo-uno, .ojo-dos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 3rem;
+}
+.ojo-uno {
+    left: 1.5rem;
+}
+.ojo-dos {
+    right: 1.5rem;
+}
+.pupila-uno, .pupila-dos {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    background: black;
+}
+.brillo {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background: white;
+}
+.mejilla-uno, .mejilla-dos {
+    display: none;
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(200, 157, 101);
+    position: absolute;
+    top: 3.5rem;
+
+    animation: animacion-mejilla 2.5s linear 0s infinite normal none;
+}
+.mejilla-uno {
+    left: 0.3rem;
+}
+.mejilla-dos {
+    right: 0.3rem;
+}
+.nariz {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    top: 6.2rem;
+    left: 5.6rem;
+}
+
+/* Segunda parte de la etiqueta section con la clase "seccion-uno" */
+
+.resultado-juego {
+    width: 200px;
+    height: 170px;
+    border-radius: 10%;
+    background: linear-gradient(rgb(241, 205, 0), rgb(235, 235, 0));
+    border: 0.2rem solid black;
+    position: absolute;
+    top: 1rem;
+    cursor: pointer;
+}
+.patita-uno, .patita-dos {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgb(186, 147, 97) ,rgb(211, 168, 111));
+    position: absolute;
+    top: -1rem;    
+}
+.patita-uno {
+    left: -1rem;
+}
+.patita-dos {
+    right: -1rem;
+}
+.patita-tres, .patita-cuatro {
+    width: 50px;
+    height: 60px;
+    background: rgb(200, 157, 101);
+    border-radius: 86px 87px 164px 163px;
+    position: absolute;
+    top: 8rem;
+
+    animation: animacion-cabeza 1.2s linear 0s infinite alternate none;
+}
+.patita-tres {
+    left: 1rem;
+}
+.patita-cuatro {
+    right: 1rem;
+}
+.dedito-uno, .dedito-dos, .dedito-tres, .dedito-cuatro, .dedito-cinco, .dedito-seis, .dedito-uno-patas-traseras, .dedito-dos-patas-traseras, .dedito-tres-patas-traseras {
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(200, 157, 101);
+}
+.dedito-uno, .dedito-dos, .dedito-tres, .dedito-cuatro, .dedito-cinco, .dedito-seis {
+    width: 17px;
+    height: 17px;
+}
+.dedito-uno, .dedito-cuatro {
+    top: 2.5rem;
+}
+.dedito-uno {
+    left: 3.2rem;
+}
+.dedito-cuatro {
+    right: 3.2rem;
+}
+.dedito-dos, .dedito-cinco {
+    top: 1.7rem;
+}
+.dedito-dos {
+    left: 3.2rem;
+}
+.dedito-cinco {
+    right: 3.2rem;
+}
+.dedito-tres, .dedito-seis {
+    top: 3rem;
+}
+.dedito-tres {
+    left: 2.6rem;
+}
+.dedito-seis {
+    right: 2.6rem;
+}
+.dedito-uno-patas-traseras, .dedito-dos-patas-traseras, .dedito-tres-patas-traseras {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: -0.5rem;
+}
+.dedito-uno-patas-traseras {
+    left: -0.2rem;
+}
+.dedito-dos-patas-traseras {
+    left: 0.8rem;
+    top: -0.8rem;
+}
+.dedito-tres-patas-traseras {
+    right: -0.2rem;
+}
+.mancha-patita {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: palevioletred;
+    border: 0.2rem solid black;
+    position: absolute;
+    top: 1.5rem;
+    left: 0.8rem;
+}
+.mancha-deditos-patita {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: palevioletred;
+    border: 0.1rem solid black;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+
+/* Etiquetas dentro de la etiqueta section con la clase "seccion-dos" */
+
+.juego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+button {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 0.3rem solid black;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(217, 217, 217));
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: 4rem;
+    font-family: monospace;  
+}
+
+/* Etiqueta p en donde van a figurar las elecciones de la pc con respecto al juego */
+
+.resultado-pc {
+    width: 150px;
+    height: 150px;
+    font-size: 3rem;
+    position: absolute;
+    top: 3.8rem;
+    left: 5rem;
+}
+
+/* Clases que se van a habilitar cuando la computadora gane el juego */
+
+.brillo-dos, .brillo-dos-dos {
+    display: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 1.7rem;
+    left: 1.3rem;
+
+    animation: animacion-ojos 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.lagrima {
+    display: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0.3rem;
+    left: 3.6rem;
+
+    animation: animacion-ojos 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* div con la clase "historial" y sus clases internas */
+
+.historial {
+    display: none;
+    justify-content: center;
+}
+.ganadas, .perdidas, .empatadas {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: monospace;
+    padding: 0.7rem;
+    margin: 0.2rem;
+    border: 0.2rem solid black;
+    background: linear-gradient(to right, rgb(255, 221, 29), rgb(231, 231, 0));
+}
+
+/* Pseudo-clases */
+
+button:hover, .redes img:hover {
+    box-shadow: 10px 9px 11px 3px rgba(118,201,175,0.33);
+    transform: scale(1.04);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.resultado-juego:hover {
+    background: rgb(241, 205, 0);
+}
+
+/* Nuevas clases */
+
+.habilitar-historial {
+    display: flex;
+    position: absolute;
+    top: 3rem;
+}
+
+/* Keyframes */
+
+@keyframes animacion-cabeza {
+    
+    0% {
+        transform:rotate(0);
+    }
+    100% {
+        transform:rotate(3deg);
+    }
+}
+
+@keyframes animacion-ojos {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animacion-mejilla {
+    
+    0% {
+        transform:translateY(0);
+    }
+    100% {
+        transform:translateY(-5px);
+    }
+}
+
+/* Media Querys */
+
+@media (max-width: 650px) {
+
+    .seccion-uno, .seccion-dos {
+        width: 380px;
+    }
+    .juego {
+        width: 100%;
+    }
+    .seccion-uno {
+        position: relative;
+    }
+    .cuerpo-perrito {
+        position: absolute;
+        left: 5.8rem;
+    }
+
+    button {
+        width: 100px;
+        height: 100px;
+        font-size: 2.7rem;
+        margin: 0.7rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .seccion-uno {
+        width: 300px;
+    }
+    .cuerpo-perrito {
+        left: 3rem;
+    }
+    .seccion-dos {
+        width: 100%;
+    }
+    .ganadas, .perdidas, .empatadas {
+        font-size: 0.8rem;
+        padding: 0.7rem;
+    }
+    .juego {
+        justify-content: space-around;
+    }
+    #piedra, #papel, #tijeras {
+        margin: 0;
+    }
+}
